@@ -13,5 +13,5 @@
   tasks:
   - name: printing variables
     ansible.builtin.debug:
-      msg: "username is {{username}} , password is {{ password }}"
+      msg: "username is {{ username }} , password is {{ password }}"
   
