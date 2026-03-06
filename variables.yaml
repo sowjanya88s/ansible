@@ -6,5 +6,7 @@
    course: "aws-devops"
   tasks:
   - name: printing above defined variables
+    vars:
+     course: "ansible"
     ansible.builtin.debug:
      msg: "trainer is {{ trainer }} , course is {{ course }}"
