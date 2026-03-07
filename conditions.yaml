@@ -7,4 +7,4 @@
   - name: using conditions
     ansible.builtin.debug:
      msg: "yes, u r in local"
-     when: is_live
+    when: is_live
