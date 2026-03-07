@@ -1,0 +1,11 @@
+- name: for loop example
+  hosts: local
+  connection: local
+  tasks:
+  - name: for loop example
+    ansible.builtin.debug:
+     msg: "items in loop:{{ item }}"
+    loop:
+    - ansible
+    - shell
+    - k8s
