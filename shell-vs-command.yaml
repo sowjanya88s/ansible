@@ -1,0 +1,19 @@
+- name: shell vs command
+  hosts: local
+  connection: local
+  tasks:
+  - name: shell vs command
+    ansible.builtin.command: ls -l
+    register: file_output
+  
+  - name: printing file_output
+    ansible.builtin.debug:
+     msg: "{{ file_output }}"
+
+  - name: shell vs command
+    ansible.builtin.shell: cat /etc/passwd | grep ec2-user
+    register: user_file_output
+  
+  - name: printing file_output
+    ansible.builtin.debug:
+     msg: "{{ user_file_output }}"
