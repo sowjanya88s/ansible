@@ -1,0 +1,11 @@
+- name: installing packages using for loop
+  hosts: local
+  connection: local
+  tasks:
+  - name: installing packages using for loop
+    ansible.builtin.package:
+     name: item
+     state: present
+    loop:
+    - nginx
+    - vsftpd
