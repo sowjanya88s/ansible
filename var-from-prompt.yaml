@@ -1,0 +1,7 @@
+- name: taking variable value from prompt
+  hosts: local
+  connection: local
+  tasks:
+  - name: taking variable value from prompt
+    ansible.builtin.debug:
+      msg: "Hi {{ Name }} , Good morning"
