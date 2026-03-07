@@ -4,4 +4,4 @@
   tasks:
   - name: passing variable value using filters
     ansible.builtin.debug:
-     msg: " hi sowjanya, greeting | default('good morning')"
+     msg: " hi sowjanya, {{ greeting | default('good morning') }}"
