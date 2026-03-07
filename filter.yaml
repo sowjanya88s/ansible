@@ -32,3 +32,11 @@
       msg: "{{ tagsMap | dict2items }}"
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
+    
+    ansible.builtin.set_fact: # setting the variable dynamically
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
+
+  
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json  }}"
+
