@@ -1,0 +1,17 @@
+- name: checking os
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing facts
+    ansible.builtin.debug:
+     msg: "{{ ansible_facts }}"
+    
+  - name: printing os
+    ansible.builtin.debug:
+    msg: "ur server contains redhat"
+    when: ansible_facts.distribution == "RedHat"
+
+  - name: printing os
+    ansible.builtin.debug:
+    msg: "ur server contains debian"
+    when: ansible_facts.distribution == "debian"
