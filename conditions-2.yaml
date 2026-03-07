@@ -1,0 +1,10 @@
+- name: loops example in ansible
+  hosts: local
+  connection: local
+  vars:
+   sesssions: 7
+  tasks:
+  - name: loops in ansible
+    ansible.builtin.debug:
+     msg: "more than 5 sessions are over"
+    when: sessions > 7
