@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   sesssions: 7
+   sessions: 7
   tasks:
   - name: loops in ansible
     ansible.builtin.debug:
