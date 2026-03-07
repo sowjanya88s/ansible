@@ -8,10 +8,10 @@
     
   - name: printing os
     ansible.builtin.debug:
-    msg: "ur server contains redhat"
+      msg: "ur server contains redhat"
     when: ansible_facts.distribution == "RedHat"
 
   - name: printing os
     ansible.builtin.debug:
-    msg: "ur server contains debian"
+      msg: "ur server contains debian"
     when: ansible_facts.distribution == "debian"
