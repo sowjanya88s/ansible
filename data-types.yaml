@@ -1,0 +1,24 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+   NAME: "sowjanya"
+   duration: 140
+   is_live: true
+   course_list:
+   - devops
+   - aws
+   - k8s
+   course_map:
+    months: "5"
+    trainer: "siva kumar"
+  tasks:
+  - name: print variables
+    ansible.builtin.debug: 
+      msg: |
+       NAME: {{ NAME }}
+       duration: {{ duration }}
+       is_live: {{ is_live }}
+       course_list: {{ course_list }}
+       course_map: {{ course_map }}
+      
