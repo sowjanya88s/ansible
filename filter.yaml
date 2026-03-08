@@ -3,11 +3,11 @@
   connection: local
   vars:
    names: sowjanya , rishika , mounika , sita
-  tagsMap:
+   tagsMap:
       name: ansible
       project: roboshop
       component: catalogue
-  tagsList: [
+   tagsList: [
         {
             "key": "name",
             "value": "ansible"
