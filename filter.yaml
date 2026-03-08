@@ -26,17 +26,20 @@
   - name: passing variable value using filters
     ansible.builtin.debug:
        msg: " hi sowjanya, {{ greeting | default('good morning') }}"
+  - name: converting string to list
     ansible.builtin.debug:
       msg: "{{ names | split(',') }}"
+  - name: converting map to dictionary
     ansible.builtin.debug:
       msg: "{{ tagsMap | dict2items }}"
+  - name: converting list to map
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
-    
+  - name: setting the variable dynamically 
     ansible.builtin.set_fact: # setting the variable dynamically
       student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
 
-  
+  - name: converting yaml to to_nice_json
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json  }}"
 
