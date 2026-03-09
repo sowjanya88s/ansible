@@ -5,6 +5,7 @@
   vars:
    string: "Devops With Ansible"
    names: sowjanya , rishika , mounika , sita
+   ip: 199.254.75.1
    tagsMap:
       name: ansible
       project: roboshop
@@ -57,3 +58,6 @@
   - name: converting to lower case
     ansible.builtin.debug:
       msg: "{{ string | lower }}"
+  - name: checking ip is valid or not
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipv4 }}"
