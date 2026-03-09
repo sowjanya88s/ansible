@@ -13,4 +13,4 @@
     
   - name: creating user 
     ansible.builtin.command: useradd sowji
-    when: cmd_output.rc == '1'
+    when: cmd_output.rc == 1
