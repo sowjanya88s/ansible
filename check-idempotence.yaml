@@ -5,3 +5,4 @@
   - name: checking user exists or not
     ansible.builtin.command: id sowji
     register: cmd_output
+    ignore_errors: true
