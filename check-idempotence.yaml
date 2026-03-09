@@ -1,0 +1,7 @@
+- name: checking user exists or not
+  hosts: local
+  connection: local
+  tasks:
+  - name: checking user exists or not
+    ansible.builtin.command: id sowji
+    register: cmd_output
