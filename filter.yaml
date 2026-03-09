@@ -5,7 +5,7 @@
   vars:
    string: "Devops With Ansible"
    names: sowjanya , rishika , mounika , sita
-   ip: "199.254.75.1"
+   ip: "256.259.299.300"
    tagsMap:
       name: ansible
       project: roboshop
