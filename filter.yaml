@@ -1,7 +1,9 @@
 - name: passing variable value using filters
   hosts: local
   connection: local
+
   vars:
+   string: "Devops With Ansible"
    names: sowjanya , rishika , mounika , sita
    tagsMap:
       name: ansible
@@ -26,15 +28,19 @@
   - name: passing variable value using filters
     ansible.builtin.debug:
        msg: " hi sowjanya, {{ greeting | default('good morning') }}"
+  
   - name: converting string to list
     ansible.builtin.debug:
       msg: "{{ names | split(',') }}"
+  
   - name: converting map to dictionary
     ansible.builtin.debug:
       msg: "{{ tagsMap | dict2items }}"
+  
   - name: converting list to map
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
+  
   - name: setting the variable dynamically 
     ansible.builtin.set_fact: # setting the variable dynamically
       student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
@@ -43,3 +49,11 @@
     ansible.builtin.debug:
       msg: "{{ student_yaml | to_nice_json  }}"
 
+  - name: converting to upper case
+    ansible.builtin.debug:
+      msg: "{{ string | upper }}"
+    
+  
+  - name: converting to lower case
+    ansible.builtin.debug:
+      msg: "{{ string | lower }}"
